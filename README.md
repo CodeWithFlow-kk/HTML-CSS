@@ -17,7 +17,7 @@ Whether you're a beginner looking to practice or an experienced developer seekin
 ## 🚀 Getting Started
 1. Clone this repository:
    ```
-   git clone https://github.com/your-username/html-css.git
+   git clone https://github.com/CodeWithFlow-kk/HTML-CSS.git
    ```
 
 2. Open any project folder.
