@@ -36,6 +36,3 @@ YouTube: [CodeWithFlow](https://www.youtube.com/@CodeWithFlow-kk)
 
 ---
 
-
-Instagram: @codewithflow
-
