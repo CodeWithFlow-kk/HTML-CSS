@@ -33,6 +33,7 @@ Whether you're a beginner looking to practice or an experienced developer seekin
 If you like these projects, consider following my work:
 
 YouTube: [CodeWithFlow](https://www.youtube.com/@CodeWithFlow-kk)
+Instagram: https://www.instagram.com/code.with.flow/?next=%2F
 
 ---
 
