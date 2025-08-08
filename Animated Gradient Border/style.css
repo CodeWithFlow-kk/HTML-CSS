@@ -1,0 +1,94 @@
+:root {
+  --radius: 12px;
+  --border-size: 3px;
+  --btn-bg: #0a1214;
+  --txt: #ffffff;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #071018;
+}
+.gradient-btn {
+  display: inline-block;
+  padding: var(--border-size);
+  border-radius: calc(var(--radius) + var(--border-size));
+  background: linear-gradient(
+    90deg,
+    #ff0080,
+    #ff8c00,
+    #f8ff00,
+    #1bff8a,
+    #00d4ff,
+    #7b2eff,
+    #ff0080
+  );
+  background-size: 300% 300%;
+  animation: slide 3.5s linear infinite;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+.gradient-btn > .btn {
+  display: inline-block;
+  border-radius: var(--radius);
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.02),
+      rgba(255, 255, 255, 0.01)
+    ),
+    var(--btn-bg);
+  color: var(--txt);
+  padding: 12px 26px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  text-align: center;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.gradient-btn:hover .btn {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55),
+    0 0 18px rgba(0, 0, 0, 0.08) inset;
+}
+.gradient-btn:active .btn {
+  transform: translateY(0) scale(0.995);
+}
+.gradient-btn:hover {
+  filter: drop-shadow(0 8px 24px rgba(59, 130, 246, 0.12));
+}
+.btn .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.12;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.04) inset;
+}
+@keyframes slide {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@media (max-width: 420px) {
+  .gradient-btn > .btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+}
