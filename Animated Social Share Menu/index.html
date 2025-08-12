@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Code With Flow - Animated Social Share Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="social-menu">
+        <div class="toggle-btn">
+            <i class="fas fa-share-alt"></i>
+        </div>
+
+        <li class="social-item" style="--i: 0; --clr: #00ffff">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+        </li>
+        <li class="social-item" style="--i: 1; --clr: #b495f1">
+            <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+        </li>
+        <li class="social-item" style="--i: 2; --clr: #7544d1">
+            <a href="#" class="social-link"><i class="fab fa-x-twitter"></i></a>
+        </li>
+        <li class="social-item" style="--i: 3; --clr: #00ffff">
+            <a href="#" class="social-link"><i class="fab fa-reddit-alien"></i></a>
+        </li>
+        <li class="social-item" style="--i: 4; --clr: #b495f1">
+            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+        </li>
+        <li class="social-item" style="--i: 5; --clr: #7544d1">
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li class="social-item" style="--i: 6; --clr: #00ffff">
+            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+        </li>
+        <li class="social-item" style="--i: 7; --clr: #b495f1">
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        </li>
+    </div>
+    <script>
+        const menu = document.querySelector(".social-menu");
+        const toggleBtn = document.querySelector(".toggle-btn");
+
+        toggleBtn.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+    </script>
+</body>
+
+</html>
