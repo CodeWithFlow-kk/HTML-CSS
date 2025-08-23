@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0a1214;
+}
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    width: 100%;
+    padding: 0px 40px;
+}
+a{
+    position: relative;
+    color: #fff;
+    background-color: white;
+    padding: 15px 35px;
+    font-size: 22px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    font-weight: 500;
+    border-radius: 4px;
+    text-decoration: none;
+    letter-spacing: 2.5px;
+}
+a::before{
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background-color: #27282c;
+}
+a span{
+    position: relative;
+    z-index: 1;
+}
+a i{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+a i::before{
+    content: "";
+    position: absolute;
+    top: -0%;
+    left: 85%;
+    height: 3px;
+    width: 15px;
+    background-color: black;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+a i::after{
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    right: 75%;
+    height: 3px;
+    width: 15px;
+    background-color: black;
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+a:hover i::before{
+    width: 20px;
+    left: 20%;
+}
+a:hover i::after{
+    width: 20px;
+    right: 10%;
+}
+a:nth-child(1):hover{
+    background-color: #1e9bff;
+    box-shadow: 0 0 35px #1e9bff;
+}
+a:nth-child(2):hover{
+    background-color: #6eff3e;
+    box-shadow: 0 0 35px #6eff3e;
+}
+a:nth-child(3):hover{
+    background-color: #ff1867;
+    box-shadow: 0 0 25px #ff1867;
+}
