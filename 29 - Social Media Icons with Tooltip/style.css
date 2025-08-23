@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0a1214;
+}
+.social-container {
+  display: flex;
+  gap: 20px;
+}
+.icon {
+  position: relative;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #222;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+.icon:hover {
+  background: #fff;
+  color: #0a1214;
+}
+.tooltip {
+  position: absolute;
+  bottom: 70px;
+  background: #fff;
+  color: #0a1214;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #fff;
+}
+.icon:hover .tooltip {
+  opacity: 1;
+  bottom: 65px;
+}
+.facebook:hover {
+  background: #1877f2;
+  color: #fff;
+}
+.twitter:hover {
+  background: #1da1f2;
+  color: #fff;
+}
+.instagram:hover {
+  background: #e1306c;
+  color: #fff;
+}
+.linkedin:hover {
+  background: #0a66c2;
+  color: #fff;
+}
+.github:hover {
+  background: #333;
+  color: #fff;
+}
