@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Dropdown Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="select-menu">
+            <p class="selected">Select your option</p>
+            <ion-icon name="chevron-down-outline" class="arrow"></ion-icon>
+        </div>
+        <ul class="options">
+            <li class="linkedin"><img src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" alt="">
+                LinkedIn</li>
+            <li class="instagram"><img src="https://img.icons8.com/?size=100&id=32323&format=png&color=000000" alt="">
+                Instagram</li>
+            <li class="facebook"><img src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000" alt="">
+                Facebook</li>
+            <li class="twitter"><img src="https://img.icons8.com/?size=100&id=13963&format=png&color=000000" alt="">
+                Twitter</li>
+            <li class="github"><img src="https://img.icons8.com/?size=100&id=19318&format=png&color=000000" alt="">
+                Youtube</li>
+        </ul>
+    </div>
+
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        const container = document.querySelector(".container");
+        const selectMenu = document.querySelector(".select-menu");
+
+        selectMenu.addEventListener("click", () => {
+            container.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>
