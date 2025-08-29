@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Submit Button with Progress ✔️ | HTML CSS JS | CodeByGaurav</title>
+    <link rel="stylesheet" href="style.css" />
+    />
+</head>
+<body>
+    <button id="btn" class="submit">Submit</button>
+</body>
+<script>
+    let btn = document.getElementById('btn');
+    btn.addEventListener("click", function () {
+        btn.setAttribute('class', 'submit process');
+        btn.innerHTML = 'Processing';
+        setTimeout(() => {
+            btn.setAttribute('class', 'submit submitted');
+            btn.innerHTML = `
+     <span class="tick">&#10004;</span>
+     Submitted
+     `;
+        }, 5000);
+    });
+</script>
+</html>
