@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab Navigatin with Smooth Transition</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <ul>
+      <li class="active">
+        <i class="fa-solid fa-house"></i>
+        <p>Home</p>
+      </li>
+      <li>
+        <i class="fa-solid fa-user"></i>
+        <p>About</p>
+      </li>
+      <li>
+        <i class="fa-solid fa-briefcase"></i>
+        <p>Services</p>
+      </li>
+      <li>
+        <i class="fa-solid fa-envelope"></i>
+        <p>Contact</p>
+      </li>
+      <li>
+        <i class="fa-solid fa-user-circle"></i>
+        <p>Profile</p>
+      </li>
+      <div class="indicator"></div>
+    </ul>
+
+    <script>
+      const items = document.querySelectorAll("ul li");
+      const indicator = document.querySelector(".indicator");
+      function moveIndicator(element) {
+        const left =
+          element.offsetLeft +
+          element.offsetWidth / 2 -
+          indicator.offsetWidth / 2;
+        indicator.style.left = `${left}px`;
+      }
+      items.forEach((item) => {
+        item.addEventListener("click", () => {
+          items.forEach((li) => li.classList.remove("active"));
+          item.classList.add("active");
+          moveIndicator(item);
+        });
+      });
+      window.onload = () => {
+        const activeItem = document.querySelector("ul li.active");
+        if (activeItem) moveIndicator(activeItem);
+      };
+    </script>
+  </body>
+</html>
