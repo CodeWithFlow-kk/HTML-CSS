@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icons{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.icons li{
+    display: inline-block;
+    margin: 6px;
+    position: relative;
+    font-size: 20px;
+}
+.icons a{
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+.icons a::before{
+    content:'';
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: block;
+    background: linear-gradient(135deg, #065f46, #10b981);
+    box-shadow: 0 12px 30px rgba(6, 95, 70, 0.28);
+    transition: transform 300ms ease-out;
+}
+.icons i{
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 300ms ease-out;
+}
+.icons a:hover::before{
+    transform: scale(0);
+}
+.icons a:hover i{
+    transform: translate(-50%, -50%) scale(1.4);
+    background: linear-gradient(135deg, #065f46, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 300ms ease-in;
+}
