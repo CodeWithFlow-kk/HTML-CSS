@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar Animation</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="menu">
+      <!-- Toggle button -->
+      <button>
+        <i class="fas fa-plus"></i>
+      </button>
+
+      <!-- 6 Menu Icons -->
+      <a href="#" title="Home">
+        <i class="fas fa-house"></i>
+      </a>
+
+      <a href="#" title="Profile">
+        <i class="fas fa-user"></i>
+      </a>
+
+      <a href="#" title="Messages">
+        <i class="fas fa-comment"></i>
+      </a>
+
+      <a href="#" title="Camera">
+        <i class="fas fa-camera"></i>
+      </a>
+
+      <a href="#" title="Settings">
+        <i class="fas fa-gear"></i>
+      </a>
+
+      <a href="#" title="Logout">
+        <i class="fas fa-right-from-bracket"></i>
+      </a>
+    </div>
+
+    <script>
+      const menu = document.querySelector(".menu");
+      const toggleBtn = menu.querySelector("button");
+      const items = menu.querySelectorAll("a");
+
+      let isOpen = false;
+
+      toggleBtn.addEventListener("click", () => {
+        isOpen = !isOpen;
+
+        toggleBtn.style.transform = isOpen ? "rotate(45deg)" : "rotate(0deg)";
+
+        const angleStep = 360 / items.length;
+        const radius = 90;
+
+        items.forEach((item, index) => {
+          if (isOpen) {
+            const angle = angleStep * index - 90;
+            const x = radius * Math.cos((angle * Math.PI) / 180);
+            const y = radius * Math.sin((angle * Math.PI) / 180);
+
+            item.style.transform = `translate(${x}px, ${y}px) scale(1)`;
+            item.style.opacity = "1";
+          } else {
+            item.style.transform = "scale(0)";
+            item.style.opacity = "0";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
